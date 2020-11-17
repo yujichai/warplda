@@ -27,7 +27,7 @@ def readUCITxt(inputDocwordName, inputVocabName):
         if intList[0] != preID:
             preID = intList[0]
             corpus.append([])
-        corpus[preID-1].append((intList[1]-1, intList[2]))
+        corpus[-1].append((intList[1]-1, intList[2]))
     return corpus, vocab
 
 def UCI2Txt(inputDocwordName, inputVocabName, outputFileName):
